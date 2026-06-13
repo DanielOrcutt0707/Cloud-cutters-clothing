@@ -13,7 +13,7 @@ export async function POST(req: Request) {
       price_data: {
         currency: 'usd',
         product_data: {
-          name: `${item.name} (${item.size})`,
+          name: `${item.name} (${item.size}${item.selectedColor ? `, ${item.selectedColor}` : ''})`,
           description: item.description,
         },
         unit_amount: item.price * 100,

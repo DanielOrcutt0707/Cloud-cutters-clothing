@@ -29,7 +29,7 @@ export default function AboutPage() {
 
         <div className="relative aspect-square bg-zinc-900 rounded-sm overflow-hidden">
           <Image 
-            src="/images/branding/cloud-cutters-logo-final.png" 
+            src="/images/branding/cloud-cutters-logo-v2.png" 
             alt="Cloud Cutters Mission" 
             fill
             className="object-contain p-20 opacity-20"

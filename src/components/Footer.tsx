@@ -36,7 +36,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <span className="text-[10px] text-zinc-700 uppercase tracking-widest">Built for Altitude</span>
-              <span className="text-[10px] text-zinc-700 uppercase tracking-widest">Drop 01</span>
+              <span className="text-[10px] text-zinc-700 uppercase tracking-widest">Drop 01 + 02</span>
             </div>
           </div>
           <div className="flex space-x-8">

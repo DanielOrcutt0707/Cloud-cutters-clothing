@@ -12,6 +12,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
   const product = products.find((p) => p.id === id);
   const { addToCart } = useCart();
   const [selectedSize, setSelectedSize] = useState<string>('M');
+  const [selectedColor, setSelectedColor] = useState<string>(product?.colors?.[0] || 'Default');
 
   if (!product) {
     notFound();
@@ -39,13 +40,13 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
              )}
           </div>
           <div className="grid grid-cols-2 gap-6 opacity-50">
-             {/* Secondary views using same image for now but cropped differently or just placeholders */}
+             {/* Secondary views */}
              <div className="relative aspect-square bg-zinc-900 overflow-hidden">
                <Image 
-                 src={product.images[0]} 
+                 src={product.images[1] || product.images[0]} 
                  alt={`${product.name} detail`} 
                  fill
-                 className="object-cover scale-150"
+                 className="object-cover"
                />
              </div>
              <div className="relative aspect-square bg-zinc-900 overflow-hidden">
@@ -74,6 +75,26 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
           </div>
 
           <div className="space-y-12 mb-16">
+            {/* Color Selector */}
+            {product.colors && product.colors.length > 0 && (
+              <div>
+                <div className="flex justify-between items-end mb-6">
+                  <h3 className="text-xs font-bold uppercase tracking-[0.3em]">Color: {selectedColor}</h3>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  {product.colors.map((color) => (
+                    <button 
+                      key={color} 
+                      onClick={() => setSelectedColor(color)}
+                      className={`px-6 py-3 border text-[10px] font-bold uppercase tracking-widest transition-all ${selectedColor === color ? 'border-white bg-white text-black' : 'border-white/10 text-zinc-500 hover:border-white/40'}`}
+                    >
+                      {color}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div>
               <div className="flex justify-between items-end mb-6">
                 <h3 className="text-xs font-bold uppercase tracking-[0.3em]">Size Selector</h3>
@@ -93,7 +114,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
             </div>
 
             <button 
-              onClick={() => addToCart(product, selectedSize)}
+              onClick={() => addToCart(product, selectedSize, selectedColor)}
               className="w-full bg-white text-black py-6 font-bold uppercase tracking-[0.2em] hover:bg-zinc-200 transition-all text-sm shadow-xl shadow-white/5"
             >
               Add to Flight Bag
