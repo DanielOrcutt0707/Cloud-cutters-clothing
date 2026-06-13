@@ -344,7 +344,7 @@ export const products: Product[] = [
   {
     id: '31',
     name: 'C-130 Rope Cap',
-    description: 'Unstructured 5-panel rope cap featuring a C-130 Hercules silhouette. Navy and Mint colorway.',
+    description: 'Premium BA671 Golf Rope Hat featuring a C-130 Hercules silhouette. Navy and Mint colorway.',
     price: 40,
     category: 'Hats',
     images: ['/images/products/c130-navy-mint-mockup.png', '/images/products/c130-silhouette.png'],
@@ -355,7 +355,7 @@ export const products: Product[] = [
   {
     id: '32',
     name: 'C-17 Rope Cap',
-    description: 'Premium rope cap with a minimalist C-17 Globemaster silhouette. Mint and Navy colorway.',
+    description: 'Premium BA671 Golf Rope Hat with a minimalist C-17 Globemaster silhouette. Mint and Navy colorway.',
     price: 40,
     category: 'Hats',
     images: ['/images/products/c17-mint-navy-mockup.png', '/images/products/c17-silhouette.png'],
@@ -366,7 +366,7 @@ export const products: Product[] = [
   {
     id: '33',
     name: 'C-5 Rope Cap',
-    description: 'Unstructured golf-style rope cap featuring the massive C-5 Galaxy silhouette.',
+    description: 'Premium BA671 Golf Rope Hat featuring the massive C-5 Galaxy silhouette.',
     price: 40,
     category: 'Hats',
     images: ['/images/products/c5-navy-mint-mockup.png', '/images/products/c5-silhouette.png'],
@@ -377,7 +377,7 @@ export const products: Product[] = [
   {
     id: '34',
     name: 'F-14 Rope Cap',
-    description: 'Anytime, Baby. The F-14 Tomcat silhouette on a premium mint and navy rope cap.',
+    description: 'Anytime, Baby. The F-14 Tomcat silhouette on a premium BA671 Golf Rope Hat.',
     price: 40,
     category: 'Hats',
     images: ['/images/products/f14-mint-navy-mockup.png', '/images/products/f14-silhouette.png'],

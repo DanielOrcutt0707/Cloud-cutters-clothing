@@ -11,7 +11,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
   const { id } = use(params);
   const product = products.find((p) => p.id === id);
   const { addToCart } = useCart();
-  const [selectedSize, setSelectedSize] = useState<string>('M');
+  const [selectedSize, setSelectedSize] = useState<string>(product?.category === 'Hats' ? 'OS' : 'M');
   const [selectedColor, setSelectedColor] = useState<string>(product?.colors?.[0] || 'Default');
 
   if (!product) {
@@ -95,23 +95,25 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
               </div>
             )}
 
-            <div>
-              <div className="flex justify-between items-end mb-6">
-                <h3 className="text-xs font-bold uppercase tracking-[0.3em]">Size Selector</h3>
-                <button className="text-[10px] uppercase tracking-widest text-zinc-500 hover:text-white transition-colors border-b border-zinc-800">Size Guide</button>
+            {product.category !== 'Hats' && (
+              <div>
+                <div className="flex justify-between items-end mb-6">
+                  <h3 className="text-xs font-bold uppercase tracking-[0.3em]">Size Selector</h3>
+                  <button className="text-[10px] uppercase tracking-widest text-zinc-500 hover:text-white transition-colors border-b border-zinc-800">Size Guide</button>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
+                    <button 
+                      key={size} 
+                      onClick={() => setSelectedSize(size)}
+                      className={`w-14 h-14 border flex items-center justify-center text-xs font-bold transition-all ${selectedSize === size ? 'border-white bg-white text-black scale-105' : 'border-white/10 text-zinc-500 hover:border-white/40'}`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-4">
-                {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
-                  <button 
-                    key={size} 
-                    onClick={() => setSelectedSize(size)}
-                    className={`w-14 h-14 border flex items-center justify-center text-xs font-bold transition-all ${selectedSize === size ? 'border-white bg-white text-black scale-105' : 'border-white/10 text-zinc-500 hover:border-white/40'}`}
-                  >
-                    {size}
-                  </button>
-                ))}
-              </div>
-            </div>
+            )}
 
             <button 
               onClick={() => addToCart(product, selectedSize, selectedColor)}
