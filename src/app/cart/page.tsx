@@ -58,7 +58,7 @@ export default function CartPage() {
             </div>
 
             {cart.map((item) => (
-              <div key={`${item.id}-${item.size}`} className="flex gap-10 border-b border-white/10 pb-12">
+              <div key={`${item.id}-${item.size}-${item.selectedColor}`} className="flex gap-10 border-b border-white/10 pb-12">
                 <div className="relative w-32 h-40 bg-zinc-900 flex-shrink-0 overflow-hidden">
                   <Image 
                     src={item.images[0]} 
@@ -71,24 +71,26 @@ export default function CartPage() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h3 className="text-xl font-bold uppercase tracking-tight mb-2">{item.name}</h3>
-                      <p className="text-[10px] text-zinc-500 uppercase tracking-[0.3em] font-bold">Size: {item.size}</p>
+                      <p className="text-[10px] text-zinc-500 uppercase tracking-[0.3em] font-bold">
+                        Size: {item.size} {item.selectedColor && `| Color: ${item.selectedColor}`}
+                      </p>
                     </div>
                     <p className="text-xl font-mono font-bold">${item.price}</p>
                   </div>
                   <div className="flex justify-between items-end mt-8">
                     <div className="flex items-center border border-white/10 h-10">
                       <button 
-                        onClick={() => updateQuantity(item.id, item.size, item.quantity - 1)}
+                        onClick={() => updateQuantity(item.id, item.size, item.selectedColor, item.quantity - 1)}
                         className="px-4 hover:bg-white/5 transition-colors"
                       >-</button>
                       <span className="px-4 text-xs font-mono font-bold">{item.quantity}</span>
                       <button 
-                        onClick={() => updateQuantity(item.id, item.size, item.quantity + 1)}
+                        onClick={() => updateQuantity(item.id, item.size, item.selectedColor, item.quantity + 1)}
                         className="px-4 hover:bg-white/5 transition-colors"
                       >+</button>
                     </div>
                     <button 
-                      onClick={() => removeFromCart(item.id, item.size)}
+                      onClick={() => removeFromCart(item.id, item.size, item.selectedColor)}
                       className="text-[10px] font-bold uppercase tracking-widest text-zinc-600 hover:text-red-600 transition-colors border-b border-zinc-800"
                     >Remove Item</button>
                   </div>

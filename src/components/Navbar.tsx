@@ -16,8 +16,8 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="relative h-12 w-48">
               <Image 
-                src="/images/branding/overcast-wordmark.png" 
-                alt="Overcast" 
+                src="/images/branding/cloud-cutters-wordmark.png" 
+                alt="Cloud Cutters" 
                 fill
                 className="object-contain object-left"
                 priority

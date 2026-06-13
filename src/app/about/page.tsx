@@ -13,7 +13,7 @@ export default function AboutPage() {
           
           <div className="prose prose-invert prose-xl space-y-8 text-zinc-400">
             <p>
-              <strong className="text-white">OVERCAST</strong> was born at the intersection of technical precision and urban expression. We believe the visual language of flight—from METAR codes to attitude indicators—is one of the most beautiful and overlooked art forms in the world.
+              <strong className="text-white">CLOUD CUTTERS</strong> was born at the intersection of technical precision and urban expression. We believe the visual language of flight—from METAR codes to attitude indicators—is one of the most beautiful and overlooked art forms in the world.
             </p>
             <p>
               We don't do "souvenir shop" gear. We don't do pilot puns. We build premium-quality streetwear that pilots, plane spotters, and aviation geeks actually want to wear. Minimalist. Authentic. Technical.
@@ -29,8 +29,8 @@ export default function AboutPage() {
 
         <div className="relative aspect-square bg-zinc-900 rounded-sm overflow-hidden">
           <Image 
-            src="/images/branding/overcast-logo-final.png" 
-            alt="Overcast Mission" 
+            src="/images/branding/cloud-cutters-logo-v2.png" 
+            alt="Cloud Cutters Mission" 
             fill
             className="object-contain p-20 opacity-20"
           />

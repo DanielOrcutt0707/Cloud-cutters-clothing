@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OVERCAST | Aviation Streetwear",
+  title: "CLOUD CUTTERS | Aviation Streetwear",
   description: "Modern streetwear for aviation enthusiasts. Premium-quality tees, hoodies, and hats.",
 };
 

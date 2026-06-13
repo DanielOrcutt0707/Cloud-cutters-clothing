@@ -6,13 +6,14 @@ import { Product } from '@/data/products';
 interface CartItem extends Product {
   quantity: number;
   size: string;
+  selectedColor?: string;
 }
 
 interface CartContextType {
   cart: CartItem[];
-  addToCart: (product: Product, size: string) => void;
-  removeFromCart: (productId: string, size: string) => void;
-  updateQuantity: (productId: string, size: string, quantity: number) => void;
+  addToCart: (product: Product, size: string, color?: string) => void;
+  removeFromCart: (productId: string, size: string, color?: string) => void;
+  updateQuantity: (productId: string, size: string, color: string | undefined, quantity: number) => void;
   clearCart: () => void;
   totalItems: number;
   subtotal: number;
@@ -25,7 +26,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   // Load cart from localStorage on mount
   useEffect(() => {
-    const savedCart = localStorage.getItem('overcast-cart');
+    const savedCart = localStorage.getItem('cloud-cutters-cart');
     if (savedCart) {
       try {
         setCart(JSON.parse(savedCart));
@@ -37,39 +38,39 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   // Save cart to localStorage on change
   useEffect(() => {
-    localStorage.setItem('overcast-cart', JSON.stringify(cart));
+    localStorage.setItem('cloud-cutters-cart', JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (product: Product, size: string) => {
+  const addToCart = (product: Product, size: string, color?: string) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find(
-        (item) => item.id === product.id && item.size === size
+        (item) => item.id === product.id && item.size === size && item.selectedColor === color
       );
       if (existingItem) {
         return prevCart.map((item) =>
-          item.id === product.id && item.size === size
+          item.id === product.id && item.size === size && item.selectedColor === color
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       }
-      return [...prevCart, { ...product, quantity: 1, size }];
+      return [...prevCart, { ...product, quantity: 1, size, selectedColor: color }];
     });
   };
 
-  const removeFromCart = (productId: string, size: string) => {
+  const removeFromCart = (productId: string, size: string, color?: string) => {
     setCart((prevCart) =>
-      prevCart.filter((item) => !(item.id === productId && item.size === size))
+      prevCart.filter((item) => !(item.id === productId && item.size === size && item.selectedColor === color))
     );
   };
 
-  const updateQuantity = (productId: string, size: string, quantity: number) => {
+  const updateQuantity = (productId: string, size: string, color: string | undefined, quantity: number) => {
     if (quantity <= 0) {
-      removeFromCart(productId, size);
+      removeFromCart(productId, size, color);
       return;
     }
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === productId && item.size === size
+        item.id === productId && item.size === size && item.selectedColor === color
           ? { ...item, quantity }
           : item
       )
