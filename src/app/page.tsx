@@ -14,7 +14,7 @@ export default function Home() {
         {/* Decorative Brand Element */}
         <div className="absolute inset-0 flex items-center justify-center opacity-10 scale-150">
           <Image 
-            src="/images/branding/cloud-cutters-logo-v2.png" 
+            src="/images/branding/cloud-cutters-logo-v4.png" 
             alt="" 
             fill
             className="object-contain"

@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FlightListFooter from "@/components/FlightListFooter";
+import FlightListPopup from "@/components/FlightListPopup";
 import { CartProvider } from "@/context/CartContext";
 
 const geistSans = Geist({
@@ -36,7 +38,9 @@ export default function RootLayout({
           <main className="flex-grow">
             {children}
           </main>
+          <FlightListFooter />
           <Footer />
+          <FlightListPopup />
         </CartProvider>
       </body>
     </html>

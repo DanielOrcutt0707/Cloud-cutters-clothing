@@ -64,7 +64,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-hoodie-vector.png', '/images/products/hoodie-vector-graphic.png'],
     drop: 'Drop 01: Clear Skies',
     limited: true,
-    colors: ['Black', 'Carbon Grey'],
+    colors: ['Terminal Black', 'Carbon Grey'],
   },
   {
     id: '6',
@@ -75,7 +75,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-hat-squawk.png', '/images/products/hat-squawk-graphic.png'],
     drop: 'Drop 01: Clear Skies',
     limited: false,
-    colors: ['Black', 'Navy'],
+    colors: ['Terminal Black', 'Navy'],
   },
   {
     id: '7',
@@ -251,7 +251,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-minimal-tee.png', '/images/products/kick-tires-minimal.png'],
     drop: 'Drop 01: Clear Skies',
     limited: false,
-    colors: ['Black', 'White'],
+    colors: ['Terminal Black', 'Soft Cream'],
   },
   {
     id: '23',
@@ -262,7 +262,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-stencil-tee.png', '/images/products/kick-tires-stencil.png'],
     drop: 'Drop 01: Clear Skies',
     limited: false,
-    colors: ['Black', 'Olive'],
+    colors: ['Terminal Black', 'Olive'],
   },
   {
     id: '24',
@@ -284,7 +284,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-minimal-hoodie.png', '/images/products/kick-tires-minimal.png'],
     drop: 'Drop 01: Clear Skies',
     limited: false,
-    colors: ['Black', 'Carbon Grey'],
+    colors: ['Terminal Black', 'Carbon Grey'],
   },
   {
     id: '26',
@@ -295,7 +295,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-stencil-hoodie.png', '/images/products/kick-tires-stencil.png'],
     drop: 'Drop 01: Clear Skies',
     limited: false,
-    colors: ['Black', 'Army Olive'],
+    colors: ['Terminal Black', 'Army Olive'],
   },
   {
     id: '27',
@@ -306,7 +306,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-vintage-hoodie.png', '/images/products/kick-tires-vintage.png'],
     drop: 'Drop 01: Clear Skies',
     limited: false,
-    colors: ['Black', 'Navy'],
+    colors: ['Terminal Black', 'Navy'],
   },
   {
     id: '28',
@@ -317,7 +317,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-engine-tee.png', '/images/products/engine-blueprint-tee.png'],
     drop: 'Drop 01: Clear Skies',
     limited: true,
-    colors: ['Black', 'White'],
+    colors: ['Terminal Black', 'Soft Cream'],
   },
   {
     id: '29',
@@ -328,7 +328,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-engine-blueprint-hoodie.png', '/images/products/engine-blueprint-tee.png'],
     drop: 'Drop 01: Clear Skies',
     limited: true,
-    colors: ['Black', 'Carbon Grey'],
+    colors: ['Terminal Black', 'Carbon Grey'],
   },
   {
     id: '30',
@@ -339,7 +339,7 @@ export const products: Product[] = [
     images: ['/images/products/mockup-script-tee.png', '/images/products/kick-tires-script-tee.png'],
     drop: 'Drop 01: Clear Skies',
     limited: false,
-    colors: ['Black', 'White'],
+    colors: ['Terminal Black', 'Soft Cream'],
   },
   {
     id: '31',
@@ -350,7 +350,7 @@ export const products: Product[] = [
     images: ['/images/products/c130-navy-mint-mockup.png', '/images/products/c130-silhouette.png'],
     drop: 'Drop 01: Clear Skies',
     limited: true,
-    colors: ['Black', 'Navy', 'White', 'Royal', 'Khaki', 'Graphite', 'Dark Green', 'Red', 'Silver', 'Maroon'],
+    colors: ['Navy / Mint', 'Mint / Navy', 'Terminal Black', 'Soft Cream', 'Royal', 'Khaki', 'Graphite', 'Dark Green', 'Red', 'Silver', 'Maroon'],
   },
   {
     id: '32',
@@ -361,7 +361,7 @@ export const products: Product[] = [
     images: ['/images/products/c17-mint-navy-mockup.png', '/images/products/c17-silhouette.png'],
     drop: 'Drop 01: Clear Skies',
     limited: true,
-    colors: ['Black', 'Navy', 'White', 'Royal', 'Khaki', 'Graphite', 'Dark Green', 'Red', 'Silver', 'Maroon'],
+    colors: ['Navy / Mint', 'Mint / Navy', 'Terminal Black', 'Soft Cream', 'Royal', 'Khaki', 'Graphite', 'Dark Green', 'Red', 'Silver', 'Maroon'],
   },
   {
     id: '33',
@@ -372,7 +372,7 @@ export const products: Product[] = [
     images: ['/images/products/c5-navy-mint-mockup.png', '/images/products/c5-silhouette.png'],
     drop: 'Drop 01: Clear Skies',
     limited: true,
-    colors: ['Black', 'Navy', 'White', 'Royal', 'Khaki', 'Graphite', 'Dark Green', 'Red', 'Silver', 'Maroon'],
+    colors: ['Navy / Mint', 'Mint / Navy', 'Terminal Black', 'Soft Cream', 'Royal', 'Khaki', 'Graphite', 'Dark Green', 'Red', 'Silver', 'Maroon'],
   },
   {
     id: '34',
@@ -383,7 +383,7 @@ export const products: Product[] = [
     images: ['/images/products/f14-mint-navy-mockup.png', '/images/products/f14-silhouette.png'],
     drop: 'Drop 01: Clear Skies',
     limited: true,
-    colors: ['Black', 'Navy', 'White', 'Royal', 'Khaki', 'Graphite', 'Dark Green', 'Red', 'Silver', 'Maroon'],
+    colors: ['Navy / Mint', 'Mint / Navy', 'Terminal Black', 'Soft Cream', 'Royal', 'Khaki', 'Graphite', 'Dark Green', 'Red', 'Silver', 'Maroon'],
   },
   {
     id: '35',
@@ -405,7 +405,7 @@ export const products: Product[] = [
     images: ['/images/products/cloud-cutters-flight-tag-dad-hat.png'],
     drop: 'Drop 01: Clear Skies',
     limited: false,
-    colors: ['Black', 'Khaki'],
+    colors: ['Terminal Black', 'Khaki'],
   },
   {
     id: '37',
@@ -416,7 +416,7 @@ export const products: Product[] = [
     images: ['/images/products/tf34-black-tee-mockup.png', '/images/products/tf34-ge-100-blueprint.png'],
     drop: 'Engine Blueprints',
     limited: true,
-    colors: ['Black', 'White', 'Teal', 'Sand'],
+    colors: ['Terminal Black', 'Soft Cream', 'Teal', 'Sand'],
   },
   {
     id: '38',
@@ -427,7 +427,7 @@ export const products: Product[] = [
     images: ['/images/products/f117-white-tee-mockup.png', '/images/products/f117-pw-100-blueprint.png'],
     drop: 'Engine Blueprints',
     limited: true,
-    colors: ['Black', 'White', 'Teal', 'Sand'],
+    colors: ['Terminal Black', 'Soft Cream', 'Teal', 'Sand'],
   },
   {
     id: '39',
@@ -438,7 +438,7 @@ export const products: Product[] = [
     images: ['/images/products/f138-teal-tee-mockup.png', '/images/products/f138-ge-100-blueprint.png'],
     drop: 'Engine Blueprints',
     limited: true,
-    colors: ['Black', 'White', 'Teal', 'Sand'],
+    colors: ['Terminal Black', 'Soft Cream', 'Teal', 'Sand'],
   },
   {
     id: '40',
@@ -449,7 +449,7 @@ export const products: Product[] = [
     images: ['/images/products/f100-pw-220-blueprint.png'],
     drop: 'Engine Blueprints',
     limited: true,
-    colors: ['Black', 'White', 'Teal', 'Sand'],
+    colors: ['Terminal Black', 'Soft Cream', 'Teal', 'Sand'],
   },
   {
     id: '41',
@@ -460,7 +460,7 @@ export const products: Product[] = [
     images: ['/images/products/f110-sand-tee-mockup.png', '/images/products/f110-ge-400-blueprint.png'],
     drop: 'Engine Blueprints',
     limited: true,
-    colors: ['Black', 'White', 'Teal', 'Sand'],
+    colors: ['Terminal Black', 'Soft Cream', 'Teal', 'Sand'],
   },
   {
     id: '42',
@@ -471,6 +471,24 @@ export const products: Product[] = [
     images: ['/images/products/ae2100-d2-blueprint.png'],
     drop: 'Engine Blueprints',
     limited: true,
-    colors: ['Black', 'White', 'Teal', 'Sand'],
+    colors: ['Terminal Black', 'Soft Cream', 'Teal', 'Sand'],
+  },
+  {
+    id: '43',
+    name: 'Crest Logo Shirt',
+    description: 'The definitive Cloud Cutters brand mark. Hybrid Crest v3 shield design on a premium streetwear tee.',
+    price: 35,
+    category: 'Tees',
+    images: [
+      '/images/products/crest-v3-black-teal.png',
+      '/images/products/crest-v3-black-white.png',
+      '/images/products/crest-v3-white-black.png',
+      '/images/products/crest-v3-gray-navy.png',
+      '/images/products/crest-v3-gray-pink.png',
+      '/images/products/crest-v3-gray-orange.png'
+    ],
+    drop: 'Drop 01: Clear Skies',
+    limited: false,
+    colors: ['Terminal Black / Teal', 'Terminal Black / White', 'Soft Cream / Black', 'Aviation Grey / Navy', 'Aviation Grey / Pink', 'Aviation Grey / Orange'],
   },
 ];
